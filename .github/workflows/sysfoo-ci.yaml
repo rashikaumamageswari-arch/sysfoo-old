@@ -1,0 +1,24 @@
+name: sysfoo-ci-pipeline
+on: [push]
+jobs:  
+ sysfoo-ci-job:
+ runs-on: ubuntu-latest
+ steps:
+ - name: Hello world
+   run: echo "welcome to sysfoo"
+   
+ - name: code checkout
+   uses: actions/checkout@v6
+   
+ - name: Test
+   run: mvn test
+   
+ - name: clean package
+   run: mvn clean
+   
+ - name: Package
+   run: mvn package
+
+  - name: view files
+    run: ls -lrt
+    
