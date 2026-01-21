@@ -20,7 +20,7 @@ jobs:
       - name: view the file
         run: ls -lrt
       - name: upload artifact
-uses: actions/upload-artifact@v4
-with:
-name: sysfoo
-path: target/**.war
+        uses: actions/upload-artifact@v4
+        with:
+         name: sysfoo
+         path: target/**.war
