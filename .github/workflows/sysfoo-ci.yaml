@@ -19,8 +19,8 @@ jobs:
         run: mvn package
       - name: view the file
         run: ls -lrt
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
-        with:
-        name: Sysfoo
-        path: target/**.war
+      - name: upload artifact
+uses: actions/upload-artifact@v4
+with:
+name: sysfoo
+path: target/**.war
